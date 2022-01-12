@@ -1,0 +1,10 @@
+node_modules
+.idea
+*.log
+.tmp
+coverage
+dist
+.DS_Store
+/types
+.parcel-cache
+.env

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "isolatedModules": true,
+    "declaration": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "strict": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "target": "esnext",
+    "esModuleInterop": true
+  },
+  "include": ["./*.ts"]
+}

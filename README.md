@@ -1,1 +1,0 @@
-# edsprout-querybuilder

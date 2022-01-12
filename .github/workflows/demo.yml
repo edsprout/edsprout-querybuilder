@@ -1,0 +1,26 @@
+name: demo
+
+on:
+  workflow_dispatch:
+    branches: [master]
+  release:
+    branches: [master]
+
+jobs:
+  gh-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - name: Install and build
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.8
+        with:
+          branch: gh-pages
+          folder: packages/demo/dist
+          ssh-key: ${{ secrets.GH_PAGES_DEPLOY }}
